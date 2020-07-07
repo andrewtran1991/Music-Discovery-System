@@ -1,0 +1,5 @@
+The full spotify dataset can be found here:
+
+https://drive.google.com/open?id=10eGVwGxiEAEJDFjDU9P0XDZ74RUMCVqm
+
+Just download the zip and place it in the CODE/data/folder and overwrite the toy database.  It should work when placed in the correct folder.  The zipped file is 166MB and unzipped it is 684MB.
