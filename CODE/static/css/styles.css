@@ -1,0 +1,117 @@
+html {
+    height: 100%;
+}
+body {
+  font-family: Arial;
+  background-image: url("../images/headphones.jpg");
+  /*background-color: #e2c9be;
+  background-image: linear-gradient(#e2c9be 0%, #fbf7e9 74%);*/
+  height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.topnav {
+background-color: #35DAF0;
+overflow: hidden;
+}
+.topnav a {
+  float: left;
+  color: #666666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #357DF0;
+  color: white;
+}
+.title {
+  margin-left: 5%;
+  margin-top: 25px;
+  color: #666666;
+  font-size: 24pt;
+  font-style: oblique;
+}
+.sub {
+	font-size: 16pt;
+  color: black;
+}
+.buttons { 
+margin-left: 5%;
+}
+.footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+.btn {
+    margin-top: 2%;
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 85px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:none;
+    font-weight:900;
+    font-size:17px;
+    letter-spacing: 0.045em;
+}
+
+.btn svg {
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.btn svg rect {
+    //stroke: #EC0033;
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.btn span{
+	padding-top: 20px;
+  background: -moz-linear-gradient(left,  rgba(53,125,240,1) 0%, rgba(75,53,240,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(53,125,240,1) 0%,rgba(75,53,240,1) 100%);
+  background: linear-gradient(to right,  rgba(53,125,240,1) 0%,rgba(75,53,240,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#357DF0', endColorstr='#4B35F0',GradientType=1 );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+
+td, th {
+  padding: 1px 4px;
+}
+
+#search_criteria{
+  display: inline-block;
+
+}
+#slider1{
+  display: inline-block;
+}

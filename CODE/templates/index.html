@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Discovery System</title>
+    <link href="{{url_for('static',filename='css/styles_v2.css')}}" rel="stylesheet"></link>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+
+<h1>Music Discovery System</h1>
+<div class="accordion">
+  <ul>
+    <li tabindex="1">
+      <div>
+        <!-- <a href="discover.html"> -->
+          <a class="active" href="{{ url_for('discover') }}">
+          <h2>DISCOVER</h2>
+          <p>Give us a song and we make your dream playlist with other similar songs</p>
+        </a>
+      </div>
+    </li>
+    <li tabindex="2">
+      <div>
+          <a class="active" href="{{ url_for('explore') }}">
+          <h2>EXPLORE</h2>
+          <p>Want to know more about our data? You can explore it here</p>
+        </a>
+      </div>
+    </li>
+    <li tabindex="3">
+      <div>
+          <a class="active" href="{{ url_for('visualize') }}">
+          <h2>VISUALIZE</h2>
+          <p>This section will give you a new look of our data</p>
+        </a>
+      </div>
+    </li>
+    <li tabindex="4">
+      <div>
+        <a href="{{ url_for('about') }}">
+          <h2>ABOUT</h2>
+          <p>More information about this project and the team behind</p>
+        </a>
+      </div>
+    </li>
+    {% if current_user.is_anonymous %}
+    <li tabindex="5">
+      <div>
+          <a class="active" href="{{ url_for('login') }}">
+          <h2>Login</h2>
+          <p>login</p>
+        </a>
+      </div>
+    </li>
+  {% else %}
+  <li tabindex="6">
+    <div>
+        <a class="active" href="{{ url_for('logout') }}">
+        <h2>LOG OUT</h2>
+        <p>Log-out</p>
+      </a>
+    </div>
+  </li>
+  {% endif %}
+  </ul>
+</div>
+
+ <div id="footer">
+  	<p id="footer-design">@ Team 101</p>
+ </div>
+
+ </body>
+ </html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="{{url_for('static',filename='css/discover.css')}}" rel="stylesheet"></link>   
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>‌
+
+</head>
+<body>
+    <nav class="navbar navbar-default" style="background-color: rgb(217, 237, 247)">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('discover') }}">{{ _('Discover') }}</a></li>
+                    <li><a href="{{ url_for('explore') }}">{{ _('Explore') }}</a></li>
+                    <li><a href="{{ url_for('visualize') }}">{{ _('Visualize') }}</a></li>
+                    <li><a href="{{ url_for('about') }}">{{ _('About') }}</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                    <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+                    {% else %}
+                    <li>
+                    <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+</nav>
+
+<div class="container">
+<div class="row">
+  <h1>About our project</h1>
+  <p>With the advent of Spotify, Pandora, Youtube and iTunes streaming services have contributed the majority of music industry revenue. Each of them provides their own methods of recommendation, but none allow for the detailed customization for a playlist that is desired. We developed an app that gives the users specific control over what characteristics are driving their playlist and which artists they see.</p>
+  <p>For our source data, we scraped the Spotify API for each year using a Python script. We chose Spotify since they bought out The Echo Nest company which was responsible for creating the Million Song Dataset.
+  <h3>This project was completed by:</h3> <ul><li>Nick Ghinazzi</li><li>Anh Tran</li><li>Anupam Priyadarshi</li><li>Nathaniel Pung</li><li>Daniel Remmes</li><li>Akshat Chauhan</li></ul></p>
+  <h3>The user interface of this application encompasses three separate sections that the users can access via the homepage. The three sections are: Discover, Explore, and Vizualize.</h3>
+    <ul>
+      <li>Discover: This page allows the user to search for any song, select the features that are important to them, and the system will find similar songs for the user to try out using the preview. The user can then decide if they like the reccomendation or not and mark the song as such, which will inform future reccomendations. This page uses HTML/Javascript/CSS and Python/Flask with a SQLite database.</li>
+      
+      <li>Explore: This page allows users to explore the entire dataset by selecting the song attributes that they care about. There are six different attributes to filter on, and a search function that automatically filters the results as the user types. This page uses HTML/Javascript/CSS and Python/Flask with a SQLite database.</li>
+
+      <li>Vizualize: This pages uses Tableau to generate vizualizations of the data. The user can use the interactive dashboard to filter for their preference and see the generated graphs. This page uses HTML/Javascript/CSS and Python/Flask with a SQLite database , and also uses the Tableau engine to generate the vizualizations.</li>
+    </ul>
+  </p>
+  <h3>
+    To run this application, here are the steps:</h3>
+    <p>For Mac users:
+    <ol>
+      <li>git clone <a href="git clone https://github.gatech.edu/apriyadarshi7/team101final.git" target="_blank">https://github.gatech.edu/apriyadarshi7/team101final.git</a>
+      <li>cd team101final
+      <li>cd CODE
+      <li>python -m venv venv
+      <li>source venv/bin/activate
+      <li>pip install -r requirements.txt
+      <li>set FLASK_APP=app.py
+      <li>flask run
+    </ol>  
+    <p>For windows users:
+    <ol>
+      <li>git clone <a href="git clone https://github.gatech.edu/apriyadarshi7/team101final.git" target="_blank">https://github.gatech.edu/apriyadarshi7/team101final.git</a>
+      <li>cd team101final
+      <li>cd CODE
+      <li>python -m venv venv
+      <li>.\venv\Scripts\activate.bat
+      <li>pip install -r requirements.txt
+      <li>set FLASK_APP=app.py
+      <li>flask run
+    </ol>
+  </p>
+</div>
+   
+</div>
+<script type="text/javascript" src ="{{url_for('static',filename='js/discover.js')}}"></script>
+</body>
+</html>
+

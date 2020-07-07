@@ -1,0 +1,5 @@
+Sample dataset dashboard:
+https://public.tableau.com/profile/anh.tran2881#!/vizhome/spotify_15863656936800/Dashboard1
+
+Full dataset dashboard:
+https://public.tableau.com/views/spotify_full/Dashboard1?:display_count=y&:origin=viz_share_link

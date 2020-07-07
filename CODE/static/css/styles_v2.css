@@ -1,0 +1,109 @@
+
+
+
+h1 {
+	 text-align: center;
+	 font-family: American Typewriter, serif;
+	 font-size: 3em;
+   color: #333;
+}
+ .accordion {
+	 width: 100%;
+	 max-width: 1080px;
+	 height: 400px;
+	 overflow: hidden;
+	 margin: 50px auto;
+}
+ .accordion ul {
+	 width: 100%;
+	 display: table;
+	 table-layout: fixed;
+	 margin: 0;
+	 padding: 0;
+}
+ .accordion ul li {
+	 display: table-cell;
+	 vertical-align: bottom;
+	 position: relative;
+	 width: 20%;
+	 height: 400px;
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 transition: all 500ms ease;
+}
+ .accordion ul li div {
+	 display: block;
+	 overflow: hidden;
+	 width: 100%;
+}
+ .accordion ul li div a {
+	 display: block;
+	 height: 400px;
+	 width: 100%;
+	 position: relative;
+	 z-index: 3;
+	 vertical-align: bottom;
+	 padding: 15px 20px;
+	 box-sizing: border-box;
+	 color: #fff;
+	 text-decoration: none;
+	 font-family: Verdana, sans-serif;
+	 transition: all 200ms ease;
+}
+ .accordion ul li div a h2 {
+	 font-family: "Times New Roman", Times, serif;
+	 text-overflow: clip;
+	 font-size: 30px;
+	 margin-bottom: 3px;
+	 color: #FFFAFA;
+	 font-weight: 600;
+}
+ .accordion ul li div a p {
+	 font-size: 20px;
+	 font-weight: 600;
+}
+ .accordion ul li:nth-child(1) {
+	 background-image: url("../images/pic5.jpg");
+}
+ .accordion ul li:nth-child(2) {
+	 background-image: url("../images/pic1.jpg");
+}
+ .accordion ul li:nth-child(3) {
+	 background-image: url("../images/pic2.jpg");
+}
+ .accordion ul li:nth-child(4) {
+	 background-image: url("../images/pic3.jpg");
+}
+ .accordion ul li:nth-child(5) {
+	 background-image: url("../images/pic4.jpg");
+}
+
+/*Transform the text in each slide and increase its opacity.*/
+ .accordion ul:hover li:hover a *, .accordion ul li:focus a *, .accordion ul:focus-within li:focus a * {
+	 opacity: 1;
+	 transform: translateX(0);
+}
+
+/*set the width of other non-selected slides */
+ .accordion ul:hover li {
+	 width: 20%;
+}
+
+/*Hide the text of the other slides when hovering over the selected slide*/
+ .accordion ul:hover li a * {
+	 opacity: 0;
+}
+
+/*Expand the width of the selected slide */
+ .accordion ul:hover li:hover {
+	 width: 80%;
+}
+
+/*set the opacity to half black shadow when hovering the selected slide*/
+ .accordion ul:hover li:hover a {
+	 background: rgba(0, 0, 0, .5);
+}
+
+#footer-design{
+	text-align: center;
+}
