@@ -90,6 +90,9 @@ Once on discover page, please follow below steps:
     
 3. Vizualize: This pages uses Tableau to generate vizualizations of the data. The user can use the interactive dashboard to filter for their preference and see the generated graphs. This page uses HTML/Javascript/CSS and Python/Flask with a SQLite database , and also uses the Tableau engine to generate the vizualizations. For the full-dataset dashboard, you can open the Tableau link in: **CODE/Templates/visualization_tableau_link.txt**
 
+Below is the link to access the Tableau dashboard:
+https://public.tableau.com/views/spotify_15863656936800/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
+
 4. About - This page has details of the project and installation instruction documented.
 
 5. Login/Logout - This page faciliates user login and logout. We store the user data in sqlite db for authentication and once authenticated that user data is stored in session.
